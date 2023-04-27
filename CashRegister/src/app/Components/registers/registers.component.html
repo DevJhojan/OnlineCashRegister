@@ -1,1 +1,16 @@
-<p>registers works!</p>
+<div class="container">
+    <h5 class="container__total">
+      Total: {{calculateTotal()}}
+    </h5>
+    <div class="container__product" *ngFor="let product of products">
+      <p class="container__name">
+        Nombre:{{product.name}}
+      </p>
+      <p class="container__amount">
+        Cantidad:{{product.amount}}
+      </p>
+      <p class="container__price">
+        Precio:{{product.price}}
+      </p>
+    </div>
+</div>

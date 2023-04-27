@@ -1,0 +1,60 @@
+@mixin Containers(){
+  width: 100%;
+  display: flex;
+  margin: 1%;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background-color: rgb(36, 35, 35);
+
+  &__title{
+    width:  80%;
+    height: 10%;
+    text-align: center;
+    border-radius: 0.5rem;
+    color: rgba(228, 20, 20, 0.76);
+    background-color: rgb(207, 207, 25);
+  }
+
+  &__product{
+    width: 25%;
+    margin: 1%;
+    height: 20%;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.2rem;
+    background-color: red;
+  }
+
+  &__product-image{
+    width: 100%;
+    border-radius: 0.2rem;
+  }
+
+  &__product-title{
+    padding: 0;
+    width: 100%;
+    font-size: 90%;
+    text-align: center;
+    color: rgba(0, 233, 0, 0.856);
+  }
+
+  &__product-description{
+    width: 100%;
+    margin-top: -2%;
+    text-align: center;
+    color: rgba(255, 177, 32, 0.87);
+  }
+
+  &__product-number{
+    width: 100%;
+    color: silver;
+    margin-top: -2%;
+    text-align: center;
+  }
+
+}
+.container{
+  @include Containers();
+}

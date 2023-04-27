@@ -1,1 +1,19 @@
-<p>products works!</p>
+<div class="container">
+  <h2 class="container__title">
+    {{title}}
+  </h2>
+  <div class="container__product" *ngFor="let product of products" (click)="onClick(product)">
+    <img [src]="product.imageUrl" alt="" class="container__product-image">
+    <h3 class="container__product-title">
+      {{product.name}}
+    </h3>
+
+    <p class="container__product-description">
+      {{product.description}}
+    </p>
+
+    <h4 class="container__product-number">
+      ${{product.price}}
+    </h4>
+  </div>
+</div>
