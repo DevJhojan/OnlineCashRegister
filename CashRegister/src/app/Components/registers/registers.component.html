@@ -1,16 +1,13 @@
 <div class="container">
-    <h5 class="container__total">
-      Total: {{calculateTotal()}}
-    </h5>
-    <div class="container__product" *ngFor="let product of products">
-      <p class="container__name">
-        Nombre:{{product.name}}
-      </p>
-      <p class="container__amount">
-        Cantidad:{{product.amount}}
-      </p>
-      <p class="container__price">
-        Precio:{{product.price}}
-      </p>
-    </div>
+  <h5 class="container__total">Total: ${{ calculateTotal() }}</h5>
+  <div
+    class="container__product"
+    *ngFor="let product of products; let indice = index"
+  >
+    <p class="container__content">Producto:<br/> {{ product.name }}</p>
+    <p class="container__content">Precio unidad:<br/> ${{ product.price }}</p>
+    <p class="container__content">Cantidad:<br/> {{ product.amount }}</p>
+    <button class="container__click" (click)="addSmeProduct(product)">+</button>
+    <button class="container__click" (click)="subtractSameProduct(product, indice)">-</button>
+  </div>
 </div>

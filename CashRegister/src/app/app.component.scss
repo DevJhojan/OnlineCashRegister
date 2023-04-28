@@ -1,18 +1,33 @@
 @mixin containers(){
-  width: 90%;
+  width: 98%;
+  margin-top: 6%;
+  margin-left: auto;
   display: inline-flex;
+  justify-content: center;
   &__blocks{
-    width: 50%;
+    width: 40%;
     padding: 3%;
-    height: 700px;
+    height: 600px;
     color: white;
-    margin-left: 1%;
+    margin-left: 3%;
     scrollbar-width: none;
     border-radius: 0.5rem;
     overflow: hidden scroll;
-    background-color: black;
+    background-color: rgb(19, 18, 18);
   }
 }
+
+
 .container{
   @include containers();
+}
+.headeris{
+  width: 99%;
+  height: 10%;
+  font-size: 110%;
+  position: absolute;
+  text-align: center;
+  border-radius: 1rem;
+  color: rgba(255, 255, 0, 0.89);
+  background-color: rgb(24, 23, 23);
 }

@@ -23,4 +23,16 @@ export class RegistersComponent {
     }
     return this.total;
   }
+
+  addSmeProduct(product: Product){
+    product.amount++;
+  }
+
+  subtractSameProduct(product: Product, index: any){
+    if(product.amount <= 1){
+      this.products.splice(index, 1);
+    }else{
+      product.amount--;
+    }
+  }
 }

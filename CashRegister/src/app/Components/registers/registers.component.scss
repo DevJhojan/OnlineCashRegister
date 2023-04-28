@@ -1,0 +1,55 @@
+@mixin containers() {
+  width: 99%;
+  height: 90%;
+  padding: 0.5%;
+  text-align: center;
+  border-radius: 0.5rem;
+  scrollbar-width: none;
+  overflow: hidden scroll;
+  background-color: rgb(34, 33, 33);
+
+  &__total {
+    padding: 1%;
+    font-size: 120%;
+    margin-top: -0.2%;
+    border-radius: 0.5rem;
+    color: rgb(22, 253, 22);
+    background-color: rgba(255, 0, 0, 0.911);
+  }
+
+  &__product{
+    width: 98%;
+    padding: 1%;
+    display: flex;
+    margin-top: 1%;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    justify-content: center;
+    background-color: rgb(255, 136, 0);
+  }
+  &__content{
+    width: 20%;
+    margin: 0.5%;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    color: rgb(255, 238, 0);
+    background-color: rgb(255, 0, 0);
+  }
+  &__click{
+    width: 5%;
+    height: 5%;
+    margin: 1%;
+    padding: 1%;
+    font-size: 120%;
+    border-radius: 50%;
+    border-style: none;
+    color: rgb(117, 255, 4);
+    background-color: rgb(255, 0, 0);
+
+  }
+}
+
+.container {
+  @include containers();
+}
